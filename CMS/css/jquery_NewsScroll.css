@@ -1,0 +1,50 @@
+
+/*#ThongBao {position: relative;width: 169px;margin: 0px 0px;}*/
+h1 {font-size: 20px;line-height: 20px;}
+#ThongBao ul, #ThongBao li, #ThongBao h4 {margin: 0; padding: 0;list-style: none;}
+a {text-decoration: none;color: #292929;}
+a:hover{text-decoration: none;}
+small {color: gray;font-weight: normal;font-size: 11px;display: block;}
+#ThongBao li {
+background: url('../../images/iconBlue.jpg') no-repeat 3px 9px;
+}
+#widget, #widget2, #widget3, #widget4 {
+overflow: hidden;
+
+position: relative;
+height:150px;
+
+}
+/*
+#widget img, #widget2 img, #widget3 img, #widget4 img{
+float: left;
+border: 1px solid white;
+padding: .2em;
+background: #d3d3d3;
+margin-right: .5em;
+width: 90px;
+height: 90px;
+}
+*/
+#widget li, #widget2 li , #widget3 li, #widget4 li {
+clear: left;
+overflow: hidden;
+position: relative;
+top: 0;
+height:40px;
+/*padding-bottom: 1em;*/
+font-size:13px;
+}
+#widget li div, #widget2 li div, #widget3 li div, #widget4 li div
+{
+	padding:0px 0px;
+}
+
+
+h4 {
+font-size: 14px;
+}
+
+li p {
+color: #474747;
+}
