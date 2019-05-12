@@ -34,7 +34,7 @@ body {
 .content
 {
 	overflow: hidden;
-	padding: 1em 1.25em;
+	/* padding: 1em 1.25em; */
 	background-color: #fff;
 }
 
@@ -593,7 +593,8 @@ background: url(../images/2017/bg-kieu1.png) repeat-x bottom left;
     background: url(../images/2017/icon-kieu1.png) no-repeat 5px center, url(../images/2017/h3-kieu1.png) no-repeat bottom right;
     padding-left: 30px;
     padding-right: 60px;
-    white-space: nowrap;
+	white-space: nowrap;
+	width: 100%;
     text-transform: uppercase;
 	margin:0;
 	}
@@ -705,13 +706,13 @@ h2.c_title  a {
 {
 	.header { padding: 1.5em 2em; }
 	.nav-bar { padding: 1em 2em; }
-	.content { padding: .5em .5em; }
+	/* .content { padding: .5em .5em; } */
 
 	.col1
 	{
 		float: left;
-		width: 54%;
-		margin-right: 1%;
+		width: 77%;
+		/* margin-right: 0.5%; */
 	}
  
 	.col2
