@@ -371,7 +371,7 @@ div.menuF1 a:hover,div.home a:hover{
 	float:right;
 }
 .hLeft{
-	width:708px;
+	width:545px;
 	float:left;
 }
 .hRight{
@@ -742,7 +742,7 @@ table.ds_VBPL tr:hover td, table.LacVietSPList-TimKiemTongQuan tr:hover td ,.div
     font-size: 80%;
 }
 div#UnionNews_main_mode2{
-	width:295px;
+	width:270px;
 	height:380px;
 	overflow:hidden;
 	float:left;		
@@ -793,8 +793,8 @@ div.union_main_image{
 	display:block;
 }
 div.union_main_image img{
-	width:416px;
-	height:310px;
+	width:100%;
+	height:250px;
 	position:absolute
 }
 .union_image_thumb div.Union_block h2 a{
@@ -908,19 +908,20 @@ div.union_main_image .Union_desc{
 .news-tab-thumb-item-0{
 	overflow:hidden;
 	float:left;
-	width:340px;
+	width:275px;
 }
 .news-tab-thumb{
 	float:right;
-	width:310px;
+	width:235px;
 }
 .news-tab-thumb-item-left-0{
-	width:160px;
+	width:140px;
 	float:left;
+	margin: 5px;
 }
 .news-tab-thumb-item-left-0 img{
-	width:150px;
-	height:130px;
+	width:140px;
+	height:110px;
 }
 .news-tab-thumb-item-content-0{
 	text-align:justify;
@@ -952,11 +953,11 @@ div.news-tab-thumb-item-title-0 a:hover{
 	border:1px #47aede solid;
 	border-top:0px;
 	border-bottom:0px;
-	width:706px;
+	width:535px;
 }
 .ui-tabs-panel img{
 	width: 100% !important;
-    height: 130px !important;
+    height: 110px !important;
 }
 
 /*TEST THONG BAO*/
