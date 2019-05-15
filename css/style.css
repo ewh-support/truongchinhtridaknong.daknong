@@ -342,7 +342,7 @@ float:left;
 }
 
 .BaiViet2 img, .NoiDung img {
-    max-width: 500px;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -487,7 +487,7 @@ padding-top: 5px;
 }
 .BaiViet2 img, .NoiDung img
 {
-	max-width: 500px;
+	max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
