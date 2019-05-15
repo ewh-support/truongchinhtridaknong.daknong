@@ -424,7 +424,7 @@ float:left;
 	font-weight:bold;
 	
 	height:20px;
-	border-left: 3px solid #9f224e;
+	/* border-left: 3px solid #9f224e; */
 	/*float:left;*/
 	width:100%;
 }
