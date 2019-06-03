@@ -907,9 +907,10 @@ div#UnionNews_main_mode2 {
 }
 
 div#UnionNews_menu_mode2 {
-	width: 270px;
+	width: 265px;
 	height: 380px;
 	float: right;
+	border: 1px solid #de0b00;
 	/* background:#E89432 no-repeat right top; */
 }
 
@@ -990,12 +991,13 @@ div.union_main_image img {
 .hot-content1 {
 	font-family: Arial;
 	font-size: 12px;
-	height: 70px;
+	height: 95px;
 	overflow: hidden;
 	position: relative;
 	top: 250px;
 	padding: 5px;
-	line-height: 19px
+	line-height: 19px;
+	
 }
 
 .collapse {
@@ -1156,7 +1158,7 @@ div.news-tab-thumb-item-title-0 a:hover {
 .ui-tabs-panel {
 	overflow: hidden;
 	clear: both;
-	border: 1px #47aede solid;
+	/* border: 1px #47aede solid; */
 	border-top: 0px;
 	border-bottom: 0px;
 	width: 535px;
@@ -1175,7 +1177,7 @@ div.news-tab-thumb-item-title-0 a:hover {
 	overflow: hidden;
 	padding-bottom: 9px;
 	border: 0px;
-	border: 1px solid;
+	border: 1px solid #de0b00;
 }
 
 /*END TEST THONG BAO*/
@@ -3068,7 +3070,8 @@ h1, h2 {
 }
 
 .ui-tabs {
-	position: relative
+	position: relative;
+	border: 1px solid #de0b00;
 }
 
 .ui-tabs .ui-tabs-nav {
