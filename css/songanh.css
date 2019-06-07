@@ -295,7 +295,7 @@ span#tP {
 
 .ms-search {
 	float: right;
-	padding: 1px 5px 0px 0px;
+	padding: 3px 3px 0px 0px;
 }
 
 .ms-sbgo a {
@@ -434,7 +434,7 @@ div.menuF1 a:hover, div.home a:hover {
 }
 
 .hlOTop {
-	height: 400px;
+	height: 385px;
 	overflow: hidden;
 	padding-bottom: 10px;
 }
@@ -448,7 +448,16 @@ div.menuF1 a:hover, div.home a:hover {
 	width: 220px;
 	float: right;
 }
-
+.hlOTopR-LCT{
+	width:220px;
+	padding-bottom:5px;
+	float:right;
+}
+.hlOTopR-LG {
+	width: 220px;
+	float: right;
+	padding-bottom: 10px;
+}
 .hLeft {
 	width: 545px;
 	float: left;
@@ -1106,12 +1115,12 @@ div.union_main_image .Union_desc {
 .news-tab-thumb-item-0 {
 	overflow: hidden;
 	float: left;
-	width: 275px;
+	width: 250px;
 }
 
 .news-tab-thumb {
 	float: right;
-	width: 235px;
+	width: 275px;
 }
 
 .news-tab-thumb-item-left-0 {
@@ -1137,6 +1146,7 @@ div.union_main_image .Union_desc {
 
 .news-tab-thumb-item-title-0 {
 	padding-bottom: 8px;
+	float: left;
 }
 
 div.news-tab-thumb-item-title-0 a, div.news-tab-thumb-item-title-0 a:link, div.news-tab-thumb-item-title-0 a:visited {
@@ -1151,8 +1161,6 @@ div.news-tab-thumb-item-title-0 a:hover {
 
 .lacviet-tabsnews {
 	background: url("../img/tintab-btm.png") no-repeat left bottom;
-	padding-bottom: 7px;
-	padding-right: 10px;
 }
 
 .ui-tabs-panel {
@@ -1165,17 +1173,16 @@ div.news-tab-thumb-item-title-0 a:hover {
 }
 
 .ui-tabs-panel img {
-	width: 100% !important;
-	height: 110px !important;
+	width: 240px !important;
+	height: 150px !important;
 }
 
 /*TEST THONG BAO*/
 
 #scroll_header1 {
-	height: 356px;
+	height: 355px;
 	background: transparent url(../img/tinnn-btm.png) no-repeat left bottom;
 	overflow: hidden;
-	padding-bottom: 9px;
 	border: 0px;
 	border: 1px solid #de0b00;
 }
@@ -1373,7 +1380,7 @@ div.news-tab-li-item a:hover {
 .news-tab {
 	overflow: hidden;
 	position: relative;
-	/* padding:10px 10px 20px; */
+	border: 1px solid #de0b00;
 	padding-left: 5px;
 }
 
@@ -3071,7 +3078,7 @@ h1, h2 {
 
 .ui-tabs {
 	position: relative;
-	border: 1px solid #de0b00;
+	/* border: 1px solid #de0b00; */
 }
 
 .ui-tabs .ui-tabs-nav {
