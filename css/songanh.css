@@ -97,6 +97,7 @@ div.thongbao-detail td.LItem a, div.thongbao-detail td.LItem a:link {
 	background: url("../../../../../../20181215162733im_/http%253A/snv.daknong.gov.vn/imgSoTTTT/iconTB1.png") no-repeat 0 2px;
 	padding-left: 18px;
 	display: block;
+	font-size: 14px;
 }
 
 .hlOTopR #WebPartWPQ9 .thongbao {
@@ -296,7 +297,7 @@ span#tP {
 .ms-search {
 	width: 220px;
 	float: right;
-	padding: 1px 5px 0px 0px;
+	padding: 3px 3px 0px 0px;
 }
 
 .ms-sbgo a {
@@ -435,13 +436,13 @@ div.menuF1 a:hover, div.home a:hover {
 }
 
 .hlOTop {
-	height: 400px;
+	height: 385px;
 	overflow: hidden;
 	padding-bottom: 10px;
 }
 
 .hlOTopL {
-	width: 545px;
+	width: 535px;
 	float: left;
 }
 
@@ -449,7 +450,16 @@ div.menuF1 a:hover, div.home a:hover {
 	width: 220px;
 	float: right;
 }
-
+.hlOTopR-LCT{
+	width:220px;
+	padding-bottom:5px;
+	float:right;
+}
+.hlOTopR-LG {
+	width: 220px;
+	float: right;
+	padding-bottom: 10px;
+}
 .hLeft {
 	width: 545px;
 	float: left;
@@ -504,6 +514,7 @@ td.dv-title {
 
 td.dv-input {
 	width: 50%;
+	
 }
 
 #ctl00_m_g_83008a6d_c9c6_4afc_bf75_c1d0b01b1795_ctl00_Noidungtim td:first-child+td+td {
@@ -899,7 +910,7 @@ table.ds_VBPL tr:hover td, table.LacVietSPList-TimKiemTongQuan tr:hover td, .div
 }
 
 div#UnionNews_main_mode2 {
-	width: 270px;
+	width: 265px;
 	height: 380px;
 	overflow: hidden;
 	float: left;
@@ -998,7 +1009,6 @@ div.union_main_image img {
 	top: 250px;
 	padding: 5px;
 	line-height: 19px;
-	
 }
 
 .collapse {
@@ -1107,12 +1117,12 @@ div.union_main_image .Union_desc {
 .news-tab-thumb-item-0 {
 	overflow: hidden;
 	float: left;
-	width: 275px;
+	width: 250px;
 }
 
 .news-tab-thumb {
 	float: right;
-	width: 235px;
+	width: 275px;
 }
 
 .news-tab-thumb-item-left-0 {
@@ -1138,6 +1148,7 @@ div.union_main_image .Union_desc {
 
 .news-tab-thumb-item-title-0 {
 	padding-bottom: 8px;
+	float: left;
 }
 
 div.news-tab-thumb-item-title-0 a, div.news-tab-thumb-item-title-0 a:link, div.news-tab-thumb-item-title-0 a:visited {
@@ -1152,8 +1163,6 @@ div.news-tab-thumb-item-title-0 a:hover {
 
 .lacviet-tabsnews {
 	background: url("../img/tintab-btm.png") no-repeat left bottom;
-	padding-bottom: 7px;
-	padding-right: 10px;
 }
 
 .ui-tabs-panel {
@@ -1166,17 +1175,16 @@ div.news-tab-thumb-item-title-0 a:hover {
 }
 
 .ui-tabs-panel img {
-	width: 100% !important;
-	height: 110px !important;
+	width: 240px !important;
+	height: 150px !important;
 }
 
 /*TEST THONG BAO*/
 
 #scroll_header1 {
-	height: 356px;
+	height: 355px;
 	background: transparent url(../img/tinnn-btm.png) no-repeat left bottom;
 	overflow: hidden;
-	padding-bottom: 9px;
 	border: 0px;
 	border: 1px solid #de0b00;
 }
@@ -1374,7 +1382,7 @@ div.news-tab-li-item a:hover {
 .news-tab {
 	overflow: hidden;
 	position: relative;
-	/* padding:10px 10px 20px; */
+	border: 1px solid #de0b00;
 	padding-left: 5px;
 }
 
@@ -3072,7 +3080,7 @@ h1, h2 {
 
 .ui-tabs {
 	position: relative;
-	border: 1px solid #de0b00;
+	/* border: 1px solid #de0b00; */
 }
 
 .ui-tabs .ui-tabs-nav {
