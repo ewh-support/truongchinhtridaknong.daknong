@@ -97,6 +97,7 @@ div.thongbao-detail td.LItem a, div.thongbao-detail td.LItem a:link {
 	background: url("../../../../../../20181215162733im_/http%253A/snv.daknong.gov.vn/imgSoTTTT/iconTB1.png") no-repeat 0 2px;
 	padding-left: 18px;
 	display: block;
+	font-size: 14px;
 }
 
 .hlOTopR #WebPartWPQ9 .thongbao {
@@ -185,7 +186,7 @@ ul#topnav li a {
 }
 
 ul#topnav li {
-	background: url("../img/bgMenuVer.png") no-repeat left center;
+	/* background: url("../img/bgMenuVer.png") no-repeat left center; */
 	line-height: 36px;
 }
 
@@ -441,7 +442,7 @@ div.menuF1 a:hover, div.home a:hover {
 }
 
 .hlOTopL {
-	width: 545px;
+	width: 535px;
 	float: left;
 }
 
@@ -513,6 +514,7 @@ td.dv-title {
 
 td.dv-input {
 	width: 50%;
+	
 }
 
 #ctl00_m_g_83008a6d_c9c6_4afc_bf75_c1d0b01b1795_ctl00_Noidungtim td:first-child+td+td {
@@ -908,7 +910,7 @@ table.ds_VBPL tr:hover td, table.LacVietSPList-TimKiemTongQuan tr:hover td, .div
 }
 
 div#UnionNews_main_mode2 {
-	width: 270px;
+	width: 265px;
 	height: 380px;
 	overflow: hidden;
 	float: left;
@@ -917,7 +919,7 @@ div#UnionNews_main_mode2 {
 }
 
 div#UnionNews_menu_mode2 {
-	width: 265px;
+	width: 260px;
 	height: 380px;
 	float: right;
 	border: 1px solid #de0b00;
@@ -947,7 +949,7 @@ table.lv_union_table_menuheader {
 .union_image_thumb {
 	overflow: hidden;
 	height: 348px;
-	background: url("../img/bgHRight.jpg") no-repeat right bottom;
+	/* background: url("../img/bgHRight.jpg") no-repeat right bottom; */
 }
 
 #UnionNews_menu_mode2 li {
@@ -1007,7 +1009,6 @@ div.union_main_image img {
 	top: 250px;
 	padding: 5px;
 	line-height: 19px;
-	
 }
 
 .collapse {
@@ -1223,7 +1224,7 @@ div.news-tab-thumb-item-title-0 a:hover {
 .ui-tabs-nav li {
 	display: inline;
 	float: left;
-	background: url("../img/bgMenuVer.png") no-repeat 0px -5px;
+	/* background: url("../img/bgMenuVer.png") no-repeat 0px -5px; */
 }
 
 .ui-tabs-nav li:first-child, .ui-tabs-nav li.ui-tabs-selected+li {
@@ -1374,7 +1375,7 @@ div.news-tab-li-item a:hover {
 }
 
 .news-tab-xemtiep {
-	background: url("../img/more.gif") no-repeat right center;
+	/* background: url("../img/more.gif") no-repeat right center; */
 	padding-right: 10px;
 }
 
@@ -3408,7 +3409,7 @@ a img {
 
 .div-maquee {
 	padding-top: 8px;
-	background: url("../img/ico-maquee.png") no-repeat left 6px;
+	/* background: url("../img/ico-maquee.png") no-repeat left 6px; */
 	padding-left: 30px;
 }
 

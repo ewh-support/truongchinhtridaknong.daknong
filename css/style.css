@@ -110,7 +110,7 @@ ul {
 .col2 ul li ul, #content2 ul li ul {
 	display: none;
 	width: 100%;
-	background: #f17f09;
+	background: #eee;
 }
 
 .col2 ul li:hover ul, #content2 ul li:hover ul {
