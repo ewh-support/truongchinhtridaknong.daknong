@@ -899,7 +899,7 @@ table.ds_VBPL tr:hover td, table.LacVietSPList-TimKiemTongQuan tr:hover td, .div
 .hiddenThumbnail img {
 	width: 70px;
 	height: 70px;
-	padding-top: 10px;
+	/* padding-top: 10px; */
 	float: left;
 	/* border: 1px #858585 solid; */
 }
@@ -961,8 +961,12 @@ table.lv_union_table_menuheader {
 	background-image: none;
 }
 
+.Union_block h2{
+	margin-top: 5px;
+    margin-bottom: 10px;
+}
 #UnionNews_menu_mode2 li .Union_block {
-	/* height:30px; */
+	height:74px;
 	overflow: hidden;
 }
 
