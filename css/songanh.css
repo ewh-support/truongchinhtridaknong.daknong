@@ -899,9 +899,8 @@ table.ds_VBPL tr:hover td, table.LacVietSPList-TimKiemTongQuan tr:hover td, .div
 .hiddenThumbnail img {
 	width: 70px;
 	height: 70px;
-	padding-top: 10px;
 	float: left;
-	/* border: 1px #858585 solid; */
+	border: 1px #1254d0 solid;
 }
 
 .ms-WPBody h2 {
@@ -953,7 +952,7 @@ table.lv_union_table_menuheader {
 }
 
 #UnionNews_menu_mode2 li {
-	padding: 8px 0px 9px 8px;
+	padding: 5px 0px 0px 5px;
 	overflow: hidden;
 }
 
@@ -961,8 +960,12 @@ table.lv_union_table_menuheader {
 	background-image: none;
 }
 
+.Union_block h2{
+	margin-top: 5px;
+    margin-bottom: 10px;
+}
 #UnionNews_menu_mode2 li .Union_block {
-	/* height:30px; */
+	height:75px;
 	overflow: hidden;
 }
 
@@ -979,7 +982,7 @@ div.union_main_image img {
 
 .union_image_thumb div.Union_block h2 a {
 	font-weight: normal;
-	padding: 0px 10px;
+	padding-left:5px;
 	display: block;
 	color: #000
 }
@@ -1149,6 +1152,9 @@ div.union_main_image .Union_desc {
 .news-tab-thumb-item-title-0 {
 	padding-bottom: 8px;
 	float: left;
+}
+.news-tab-thumb-item-title-0 .moTa {
+height: 53px;
 }
 
 div.news-tab-thumb-item-title-0 a, div.news-tab-thumb-item-title-0 a:link, div.news-tab-thumb-item-title-0 a:visited {
