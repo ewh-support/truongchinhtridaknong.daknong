@@ -447,8 +447,9 @@ div.menuF1 a:hover, div.home a:hover {
 }
 
 .hlOTopR {
-	width: 220px;
-	float: right;
+	width: 208px;
+	float: left;
+    padding-left: 8px;
 }
 .hlOTopR-LCT{
 	width:220px;
@@ -466,7 +467,7 @@ div.menuF1 a:hover, div.home a:hover {
 }
 
 .hRight {
-	width: 220px;
+	width: 208px;
 	float: right;
 }
 
