@@ -128,7 +128,58 @@
                   new mq("m1", 10);
                   mqRotate(mqr, 10); // must come last
                 }
-                window.onload = doublecast(window.onload, start);</script><marquee><span>Nhiệt liệt chào mừng Đại hội Công đoàn Việt Nam lần thứ XII, nhiệm kỳ 2018 - 2023</span>&nbsp;&nbsp;&nbsp; <span>Nhiệt liệt chào mừng Đại hội Công đoàn Việt Nam lần thứ XII, nhiệm kỳ 2018 - 2023 !</span>&nbsp;&nbsp;&nbsp;<span> Nhiệt liệt chào mừng Đại hội Công đoàn Việt Nam lần thứ XII, nhiệm kỳ 2018 - 2023 !</span></marquee></div></div><div class="searchR"><div class="ms-search"><div class="s4-search s4-rp" style="font-size:14px !important;    padding-top: 1px;padding-left: 23px" id="s4-searcharea"><input type="text" name="q" placeholder="Tìm kiếm"/> <a class="ms-sbgo"></a></div></div></div></div><div class="content"><div class="col2"><div id="ct100_menungang1" parameter="{IDChuyenMuc:81,Depth:2}"><ul><li class="onlick-dropdown"><a class="red">Giới thiệu <span style="float: right;padding-top: 10px" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a><ul class="sub-menu"><li><a class="yellow" href="/gioi-thieu-chung">Giới thiệu chung</a></li><li><a class="yellow">Tổ chức bộ máy<span style="float: right;padding-top: 10px" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a><ul class="sub-menu2"><li><a href="/dang-bo">Đảng Ủy</a></li><li><a href="/bgh-khoa-phong">BGH, Khoa, Phòng</a></li><li><a href="/gioi-thieu-cong-doan">Công đoàn</a></li><li><a href="/hoi-cuu-cb">Hội cựu CB</a></li><li><a href="/doan-thanh-nien">Đoàn thanh niên</a></li></ul></li></ul></li><style>.red{
+                window.onload = doublecast(window.onload, start);</script><marquee><span>Nhiệt liệt chào mừng Đại hội Công đoàn Việt Nam lần thứ XII, nhiệm kỳ 2018 - 2023</span>&nbsp;&nbsp;&nbsp; <span>Nhiệt liệt chào mừng Đại hội Công đoàn Việt Nam lần thứ XII, nhiệm kỳ 2018 - 2023 !</span>&nbsp;&nbsp;&nbsp;<span> Nhiệt liệt chào mừng Đại hội Công đoàn Việt Nam lần thứ XII, nhiệm kỳ 2018 - 2023 !</span></marquee></div></div><div class="searchR"><div class="ms-search"><div class="s4-search s4-rp" style="font-size:14px !important;    padding-top: 1px;padding-left: 23px" id="s4-searcharea"><input type="text" name="q" placeholder="Tìm kiếm"/> <a class="ms-sbgo"></a></div></div></div></div><script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script><script>$.urlParam = function(name){
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+                if (results==null){
+                return null;
+                }
+                else{
+                return results[1] || 0;
+                }
+            }
+            var keysearch = $.urlParam('q');
+            $.get( `http://api.github.com/search/code?q=${keysearch}in:file+language:markdown+repo:easywebhub/truongchinhtridaknong`, function( data ) {
+                var str="<ul>";
+                var rs = data.items;
+                var total = data.total_count;
+                if(data.incomplete_results==true){
+                   
+                }
+                for(var i in rs){
+                    if( rs[i].name == "index.md"){
+                        continue;
+                    }
+                    str+=  `<li><a href=\" ${rs[i].name.split('.').shift() }\">  ${rs[i].name.split('.').shift() } </a><SPAN class=\"ShowDate\"></SPAN></li>`;
+                }
+                str+="</ul>"
+                $("#result").append(str);
+                $("#keywork").append("Từ khóa tìm kiếm : " +  keysearch);
+                $("#total").append("Tìm thấy : <b>"+ total + " </b> kết quả");
+            });
+
+<div class="content">
+	
+	
+	<div class="col2">
+	  <div id="ct100_menungang1" parameter="{IDChuyenMuc:81,Depth:2}">
+	    <ul >
+	        <li  class=" onlick-dropdown"><a class="red" >Giới thiệu <span style="float: right;padding-top: 10px;" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a>
+	          <ul class="sub-menu" >
+	            <li ><a class="yellow"  href="/gioi-thieu-chung">Giới thiệu chung</a></li>
+	            <li ><a class="yellow">Tổ chức bộ máy<span style="float: right;padding-top: 10px;" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a>
+	              <ul class="sub-menu2"  >
+	                <li ><a   href="/dang-bo">Đảng Ủy</a></li>
+	                <li ><a  href="/bgh-khoa-phong">BGH, Khoa, Phòng</a></li>
+	                <li><a   href="/gioi-thieu-cong-doan">Công đoàn</a></li>
+	                <li><a   href="/hoi-cuu-cb">Hội cựu CB</a></li>
+	                <li><a   href="/doan-thanh-nien">Đoàn thanh niên</a></li>
+	              </ul>
+	            </li>
+	          </ul>
+	      </li>
+	   
+	    <style>
+	      .red{
 	        background: #950000 !important;
 	      }
 	        .sub-menu li{
@@ -147,7 +198,239 @@
 	      }
 	      .onlick-dropdown {
 	        background:#eeeeee;
-	      }</style><li class="onlick-dropdown"><i class="fa fa-angle-right"></i> <a class="red" href="/to-chuc-dang-doan-the">Tổ chức đảng, đoàn thể</a></li><li class="onlick-dropdown"><i class="fa fa-angle-right"></i> <a class="red" href="/thong-bao">Thông báo</a></li><li class="onlick-dropdown"><a class="red">Tin tức - Sự kiện<span style="float: right;padding-top: 10px" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a><ul class="sub-menu"><li><a class="yellow" href="/tin-tuc-su-kien/tin-tong-hop">Tin tổng hợp</a></li><li><a class="yellow" href="/tin-tuc-su-kien/tin-noi-bo">Tin nội bộ</a></li></ul></li><li class="onlick-dropdown"><a class="red">Đào tạo bồi dưỡng liên kết<span style="float: right;padding-top: 10px" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a><ul class="sub-menu"><li><a class="yellow">NĂM HỌC 2018-2019<span style="float: right;padding-top: 10px" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a><ul class="sub-menu2"><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-cao-cap-llct-khoa-9">LỚP CAO CẤP LLCT KHOÁ 9</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-58">Lớp TCLLCT-HC KHOÁ 58</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-59">Lớp TCLLCT-HC KHOÁ 59</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-60">Lớp TCLLCT-HC KHOÁ 60</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-61">Lớp TCLLCT-HC KHOÁ 61</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-62">Lớp TCLLCT-HC KHOÁ 62</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-63">Lớp TCLLCT-HC KHOÁ 63</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-64">Lớp TCLLCT-HC KHOÁ 64</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-65">Lớp TCLLCT-HC KHOÁ 65</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-66">Lớp TCLLCT-HC KHOÁ 66</a></li></ul></li><li><a class="yellow">NĂM HỌC 2019 - 2020<span style="float: right;padding-top: 10px" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a><ul class="sub-menu2"><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-67">Lớp TCLLCT-HC KHOÁ 67</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-68">Lớp TCLLCT-HC KHOÁ 68</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-69">Lớp TCLLCT-HC KHOÁ 69</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-70">Lớp TCLLCT-HC KHOÁ 70</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-71">Lớp TCLLCT-HC KHOÁ 71</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-72">Lớp TCLLCT-HC KHOÁ 72</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-73">Lớp TCLLCT-HC KHOÁ 73</a></li><li><a href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-74">Lớp TCLLCT-HC KHOÁ 74</a></li></ul></li></ul></li><li class="onlick-dropdown"><a class="red">Nghiên cứu khoa học <span style="float: right;padding-top: 10px" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a><ul class="sub-menu"><li><a class="yellow" href="/gioi-thieu-chung">Đề tài khoa học cấp Tỉnh</a></li><li><a class="yellow" href="/de-tai-khoa-hoc-cap-truong">Đề tài khoa học cấp Trường</a></li><li><a class="yellow" href="/de-tai-khoa-hoc-cap-truong">Đề tài khoa học cấp Trường</a></li><li><a class="yellow" href="/hoi-thao-toa-dam-khoa-hoc">Hội thảo, tọa đàm khoa học</a></li><li><a class="yellow" href="/ban-tin">Bản tin</a></li><li><a class="yellow" href="/nghien-cuu-trao-doi">Nghiên cứu trao đổi</a></li><li><a class="yellow" href="/bai-nghien-cuu-tong-hop">Bài nghiên cứu, tổng hợp</a></li></ul></li><li class="onlick-dropdown"><a class="red">TỔ CHỨC, HÀNH CHÍNH, THÔNG TIN, TƯ LIỆU <span style="float: right;padding-top: 10px" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a><ul class="sub-menu"><li><a class="yellow" href="/cong-tac-to-chu-thi-dua-khen-thuong">Công tác tổ chức, thi đua khen thưởng</a></li><li><a class="yellow" href="/cong-tac-hanh-chinh">Công tác hành chính</a></li><li><a class="yellow" href="/cong-tac-thong-tin-tu-lieu">Công tác Thông tin, tư liệu</a></li></ul></li><li class="onlick-dropdown"><a class="red">Văn bản quản lý<span style="float: right;padding-top: 10px" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a><ul class="sub-menu"><li><a class="yellow" href="/van-ban-trung-uong">Văn bản Trung ương</a></li><li><a class="yellow" href="/van-ban-cua-tinh">Văn bản của Tỉnh</a></li><li><a class="yellow" href="/van-ban-nha-truong">Văn bản Nhà trường</a></li></ul></li></ul></div><div class="lienketbanner"><a href="http://dangcongsan.vn/" target="_blank"><img src="/images/BAODIENTU.png" alt="Báo điện tử Đảng cộng sản"/> </a><a href="http://chinhphu.vn" target="_blank"><img src="/images/CONGTTCP.png" alt="Cổng thông tin điện tử Chính phủ"/> </a><a href="http://www.xaydungdang.org.vn/" target="_blank"><img src="/images/TAPCHIXDD.png" alt="Xây dựng Đảng"/></a><a href="http://www.tapchicongsan.org.vn/" target="_blank"><img src="/images/TAPCHICONGSAN.png" alt="Tạp chí Cộng sản"/></a><a href="http://www.tuyengiao.vn/" target="_blank"><img src="/images/tuyengiao.png" alt="Tuyên giáo"/></a><a href="http://daknong.gov.vn/" target="_blank"><img src="/images/CONGTT.png" alt="Cổng thông tin điện tử ĐAKNÔNG"/></a><a href="https://daknong.gov.vn/web/cong-bao-tinh-dak-nong/trang-chu/" target="_blank"><img src="/images/CONG BAO.png" alt="Công báo ĐAKNÔNG"/></a><a href="http://hdnd.daknong.gov.vn/" target="_blank"><img src="/images/HDND.png" alt="Hội đồng nhân nhân"/></a><a href="https://hcma.vn/Pages/default.aspx/" target="_blank"><img src="/images/HVHCQG.png" alt="Cổng thông tin điện tử Học viện chính trị quốc gia Hồ Chí Minh"/></a><a href="https://mail.daknong.gov.vn/webmail/login.iws/" target="_blank"><img src="/images/MAIL.png" alt="Hệ thống mail công vụ tỉnh Đắk Nông"/></a><a href="#" target="_blank"><img src="/images/IOFFICE.png" alt="Hệ thống quản lý văn bản tỉnh Đắk Nông"/></a></div><div id="ct1000_lienketbannganh" parameter=""><div class="c_container kieu2"><div class="head_title"><div class="head_title-inner"><div class="c_icon"><h2 class="c_title"><span class="TitleHead"><a href="/Default.aspx?tabid=233">Liên kết website</a></span></h2></div><div class="c_actions"></div><div class="clear_float"></div></div></div><div class="c_content"><select name="ctl00$lienketbannganh$ctl00$ddlLienKet" id="ct1000_lienketbannganh_ctl00_ddlLienKet" class="lienketweb" onchange="RedirectSite(this);"><option value="0">--Liên kết website--</option><option value="http://baoquangnam.com.vn/">Báo ĐAKNÔNG</option><option value="http://www.quangnampost.com/">Bưu điện ĐAKNÔNG</option><option value="http://www.tuoitredatquang.com">Diễn đàn ĐAKNÔNG</option><option value="http://www.hoianriverresort.com/">Hoi An Hotel</option><option value="http://www.quangnamtourism.com.vn">Làng nghề truyền thống H.An</option><option value="http://www.quangnambusiness.gov.vn/">Portal Doanh nghiệp và ĐT QNam</option><option value="http://www.dptqnam.gov.vn/">Sở TT-TT ĐAKNÔNG</option><option value="http://www.quangnam.edu.vn/">Sở GDĐT</option><option value="http://congly.com.vn">Báo Công lý</option><option value="http://xahoi.com.vn">Báo Xã hội</option><option value="http://www.dpiqnam.gov.vn/">Sở KHĐT</option><option value="http://www.ngoaivuquangnam.gov.vn">Sở Ngoại vụ</option><option value="http://ngoisao.vn">Báo Ngôi sao</option><option value="http://stc.quangnam.gov.vn/">Sở Tài chính QNam</option><option value="http://www.quangnamtrade.com.vn">Sở Công thương QNam</option><option value="http://www.vhttdlqnam.gov.vn/">Sở VHTTDL</option><option value="http://www.tinhdoanqnam.vn/">Tỉnh đoàn ĐAKNÔNG</option><option value="http://www.qnamuni.edu.vn/">Trường Đại học QNam</option><option value="http://www.vpubnd.quangnam.vn/">Văn phòng UBND</option><option value="http://www.skhcnquangnam.gov.vn/">Sở Khoa học Công nghệ</option><option value="http://www.dardqnam.gov.vn/">Sở NN &amp; PTNT</option><option value="http://qppl.vpubnd.quangnam.vn">Tra cứu văn bản ĐAKNÔNG</option><option value="http://tamky.gov.vn/">Thành phố Tam Kỳ</option><option value="http://hoian.gov.vn/">Thành phố Hội An</option><option value="http://www.noivuqnam.gov.vn/">Sở Nội Vụ</option><option value="http://www.thanhtraqnam.gov.vn/">Thanh Tra Tỉnh ĐAKNÔNG</option><option value="http://truongchinhtriquangnam.gov.vn/">Trường Chính trị ĐAKNÔNG</option><option value="http://www.eqn.com.vn">Điện lực ĐAKNÔNG</option><option value="http://www.hoianhandicraft.com">Hoi An Travel</option><option value="http://www.hoiantravel.com/">Hoi An river resort</option></select></div></div></div><div id="ct100_luottruycap" parameter=""><div class="c_container kieu2"><div class="head_title"><div class="head_title-inner"><div class="c_icon"><h2 class="c_title">Thống kê truy cập</h2></div><div class="c_actions"></div><div class="clear_float"></div></div></div><div class="c_content" style="font-size:12px;text-align:justify"><img src="/images/users.png" style="width:20px;border:none"/> Đang truy cập: <b><span id="ct1000_luottruycap_ctl00_Label1" style="color:#CC0000">10</span></b><br/><img src="/images/hits.png" style="width:20px;border:none"/> Tổng lượt truy cập: <b><span id="ct1000_luottruycap_ctl00_lblCounter" style="color:#CC0000">98834111</span></b></div></div></div></div><script src="/js/jquery.min.js"></script><script>$(document).ready(function() {
+	      }
+	
+	    </style>
+	    
+	   
+	    <li class="onlick-dropdown">
+	        <i class="fa fa-angle-right"></i>
+	        <a class="red" href="/to-chuc-dang-doan-the">Tổ chức đảng, đoàn thể</a>
+	    </li>
+	    <li class="onlick-dropdown" >
+	      <i class="fa fa-angle-right"></i>
+	      <a class="red" href="/thong-bao">Thông báo</a>
+	    </li>
+	    <li class="onlick-dropdown"><a class="red" >Tin tức - Sự kiện<span style="float: right;padding-top: 10px;" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a>
+	      <ul  class="sub-menu">
+	        <li ><a class="yellow"  href="/tin-tuc-su-kien/tin-tong-hop">Tin tổng hợp</a></li>
+	        <li ><a class="yellow"  href="/tin-tuc-su-kien/tin-noi-bo">Tin nội bộ</a>
+	        </li>
+	      </ul>
+	  </li>
+	      <li class="onlick-dropdown"><a class="red" >Đào tạo bồi dưỡng liên kết<span style="float: right;padding-top: 10px;" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a>
+	        <ul  class="sub-menu" >
+	          <li ><a class="yellow" >NĂM HỌC 2018-2019<span style="float: right;padding-top: 10px;" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a>
+	            <ul class="sub-menu2" >
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-cao-cap-llct-khoa-9">LỚP CAO CẤP LLCT KHOÁ 9</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-58">Lớp TCLLCT-HC KHOÁ 58</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-59">Lớp TCLLCT-HC KHOÁ 59</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-60">Lớp TCLLCT-HC KHOÁ 60</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-61">Lớp TCLLCT-HC KHOÁ 61</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-62">Lớp TCLLCT-HC KHOÁ 62</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-63">Lớp TCLLCT-HC KHOÁ 63</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-64">Lớp TCLLCT-HC KHOÁ 64</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-65">Lớp TCLLCT-HC KHOÁ 65</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2018-2019/lop-tcllct-hc-khoa-66">Lớp TCLLCT-HC KHOÁ 66</a></li>
+	            </ul>
+	          </li>
+	          <li ><a  class="yellow">NĂM HỌC 2019 - 2020<span style="float: right;padding-top: 10px;" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a>
+	            <ul class="sub-menu2" >
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-67"> Lớp TCLLCT-HC KHOÁ 67</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-68">Lớp TCLLCT-HC KHOÁ 68</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-69">Lớp TCLLCT-HC KHOÁ 69</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-70">Lớp TCLLCT-HC KHOÁ 70</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-71">Lớp TCLLCT-HC KHOÁ 71</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-72">Lớp TCLLCT-HC KHOÁ 72</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-73">Lớp TCLLCT-HC KHOÁ 73</a></li>
+	              <li ><a  href="/dao-tao-boi-duong-va-lien-ket/nam-hoc-2019-2020/lop-tcllct-hc-khoa-74">Lớp TCLLCT-HC KHOÁ 74</a></li>
+	            </ul>
+	          </li>
+	        </ul>
+	    </li>
+	    <li class="onlick-dropdown"><a class="red" >Nghiên cứu khoa học <span style="float: right;padding-top: 10px;" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a>
+	      <ul  class="sub-menu">
+	        <li ><a class="yellow"  href="/gioi-thieu-chung">Đề tài khoa học cấp Tỉnh</a></li>
+	        <li ><a class="yellow" href="/de-tai-khoa-hoc-cap-truong">Đề tài khoa học cấp Trường</a>
+	        <li ><a class="yellow" href="/de-tai-khoa-hoc-cap-truong">Đề tài khoa học cấp Trường</a>
+	        <li ><a class="yellow" href="/hoi-thao-toa-dam-khoa-hoc">Hội thảo, tọa đàm khoa học</a>
+	        <li ><a class="yellow" href="/ban-tin">Bản tin</a>
+	        <li ><a class="yellow" href="/nghien-cuu-trao-doi">Nghiên cứu trao đổi</a>
+	        <li ><a class="yellow" href="/bai-nghien-cuu-tong-hop">Bài nghiên cứu, tổng hợp </a>
+	        </li>
+	      </ul>
+	    </li>
+	    <li class="onlick-dropdown"><a class="red" >TỔ CHỨC, HÀNH CHÍNH, THÔNG TIN, TƯ LIỆU <span style="float: right;padding-top: 10px;" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a>
+	      <ul  class="sub-menu">
+	        <li ><a class="yellow"  href="/cong-tac-to-chu-thi-dua-khen-thuong">Công tác tổ chức, thi đua khen thưởng</a></li>
+	        <li ><a class="yellow" href="/cong-tac-hanh-chinh">Công tác hành chính</a>
+	        <li ><a class="yellow" href="/cong-tac-thong-tin-tu-lieu">Công tác Thông tin, tư liệu</a>
+	        </li>
+	      </ul>
+	    </li>
+	          
+	    <li class="onlick-dropdown"><a class="red" >Văn bản quản lý<span style="float: right;padding-top: 10px;" class="accordsuffix"><img src="/img/plus.gif" class="statusicon"></span></a>
+	      <ul  class="sub-menu">
+	        <li ><a class="yellow"  href="/van-ban-trung-uong">Văn bản Trung ương </a></li>
+	        <li ><a class="yellow" href="/van-ban-cua-tinh">Văn bản của Tỉnh</a>
+	        <li ><a class="yellow"  href="/van-ban-nha-truong">Văn bản Nhà trường</a>
+	        </li>
+	      </ul>
+	    </li> 
+	    </ul>
+	  </div>
+	
+	  <div class="lienketbanner">
+	    <a href="http://dangcongsan.vn/" target="_blank"
+	      ><img src="/images/BAODIENTU.png" alt="Báo điện tử Đảng cộng sản"/>    
+	    </a>
+	    <a href="http://chinhphu.vn" target="_blank"
+	      ><img  src="/images/CONGTTCP.png"
+	        alt="Cổng thông tin điện tử Chính phủ"/>
+	      </a> 
+	    <a href="http://www.xaydungdang.org.vn/" target="_blank"
+	      ><img src="/images/TAPCHIXDD.png" alt="Xây dựng Đảng"
+	    /></a>
+	    <a href="http://www.tapchicongsan.org.vn/" target="_blank"
+	      ><img src="/images/TAPCHICONGSAN.png" alt="Tạp chí Cộng sản"
+	    /></a>
+	    <a href="http://www.tuyengiao.vn/" target="_blank"
+	      ><img src="/images/tuyengiao.png" alt="Tuyên giáo"
+	    /></a>
+	    <a href="http://daknong.gov.vn/" target="_blank"
+	      ><img src="/images/CONGTT.png" alt="Cổng thông tin điện tử ĐAKNÔNG"
+	    /></a>
+	    <a href="https://daknong.gov.vn/web/cong-bao-tinh-dak-nong/trang-chu/" target="_blank"
+	      ><img src="/images/CONG BAO.png" alt="Công báo ĐAKNÔNG"
+	    /></a>
+	    <a href="http://hdnd.daknong.gov.vn/" target="_blank"
+	      ><img src="/images/HDND.png" alt="Hội đồng nhân nhân"
+	    /></a>
+	    <a href="https://hcma.vn/Pages/default.aspx/" target="_blank"
+	      ><img src="/images/HVHCQG.png" alt="Cổng thông tin điện tử Học viện chính trị quốc gia Hồ Chí Minh"
+	    /></a> 
+	    <a href="https://mail.daknong.gov.vn/webmail/login.iws/" target="_blank"
+	      ><img src="/images/MAIL.png" alt="Hệ thống mail công vụ tỉnh Đắk Nông"
+	    /></a>
+	    <a href="#" target="_blank"
+	    ><img src="/images/IOFFICE.png" alt="Hệ thống quản lý văn bản tỉnh Đắk Nông"
+	  /></a>
+	  </div>
+	
+	  <div id="ct1000_lienketbannganh" parameter="">
+	    <div class="c_container kieu2">
+	      <div class="head_title">
+	        <div class="head_title-inner">
+	          <div class="c_icon">
+	            <h2 class="c_title">
+	              <span class="TitleHead"
+	                ><a href="/Default.aspx?tabid=233">Liên kết website</a></span
+	              >
+	            </h2>
+	          </div>
+	          <div class="c_actions"></div>
+	
+	          <div class="clear_float"></div>
+	        </div>
+	      </div>
+	      <div class="c_content">
+	        <select
+	          name="ctl00$lienketbannganh$ctl00$ddlLienKet"
+	          id="ct1000_lienketbannganh_ctl00_ddlLienKet"
+	          class="lienketweb"
+	          onchange="RedirectSite(this);"
+	        >
+	          <option value="0">--Liên kết website--</option>
+	          <option value="http://baoquangnam.com.vn/">Báo ĐAKNÔNG</option>
+	          <option value="http://www.quangnampost.com/">Bưu điện ĐAKNÔNG</option>
+	          <option value="http://www.tuoitredatquang.com"
+	            >Diễn đàn ĐAKNÔNG</option
+	          >
+	          <option value="http://www.hoianriverresort.com/">Hoi An Hotel</option>
+	          <option value="http://www.quangnamtourism.com.vn"
+	            >Làng nghề truyền thống H.An</option
+	          >
+	          <option value="http://www.quangnambusiness.gov.vn/"
+	            >Portal Doanh nghiệp và ĐT QNam</option
+	          >
+	          <option value="http://www.dptqnam.gov.vn/">Sở TT-TT ĐAKNÔNG</option>
+	          <option value="http://www.quangnam.edu.vn/">Sở GDĐT</option>
+	          <option value="http://congly.com.vn">Báo Công lý</option>
+	          <option value="http://xahoi.com.vn">Báo Xã hội</option>
+	          <option value="http://www.dpiqnam.gov.vn/">Sở KHĐT</option>
+	          <option value="http://www.ngoaivuquangnam.gov.vn">Sở Ngoại vụ</option>
+	          <option value="http://ngoisao.vn">Báo Ngôi sao</option>
+	          <option value="http://stc.quangnam.gov.vn/">Sở Tài chính QNam</option>
+	          <option value="http://www.quangnamtrade.com.vn"
+	            >Sở Công thương QNam</option
+	          >
+	          <option value="http://www.vhttdlqnam.gov.vn/">Sở VHTTDL</option>
+	          <option value="http://www.tinhdoanqnam.vn/">Tỉnh đoàn ĐAKNÔNG</option>
+	          <option value="http://www.qnamuni.edu.vn/"
+	            >Trường Đại học QNam</option
+	          >
+	          <option value="http://www.vpubnd.quangnam.vn/">Văn phòng UBND</option>
+	          <option value="http://www.skhcnquangnam.gov.vn/"
+	            >Sở Khoa học Công nghệ</option
+	          >
+	          <option value="http://www.dardqnam.gov.vn/">Sở NN &amp; PTNT</option>
+	          <option value="http://qppl.vpubnd.quangnam.vn"
+	            >Tra cứu văn bản ĐAKNÔNG</option
+	          >
+	          <option value="http://tamky.gov.vn/">Thành phố Tam Kỳ</option>
+	          <option value="http://hoian.gov.vn/">Thành phố Hội An</option>
+	          <option value="http://www.noivuqnam.gov.vn/">Sở Nội Vụ</option>
+	          <option value="http://www.thanhtraqnam.gov.vn/"
+	            >Thanh Tra Tỉnh ĐAKNÔNG</option
+	          >
+	          <option value="http://truongchinhtriquangnam.gov.vn/"
+	            >Trường Chính trị ĐAKNÔNG</option
+	          >
+	          <option value="http://www.eqn.com.vn">Điện lực ĐAKNÔNG</option>
+	          <option value="http://www.hoianhandicraft.com">Hoi An Travel</option>
+	          <option value="http://www.hoiantravel.com/"
+	            >Hoi An river resort</option
+	          >
+	        </select>
+	      </div>
+	    </div>
+	  </div>
+	
+	  <div id="ct100_luottruycap" parameter="">
+	    <div class="c_container kieu2">
+	      <div class="head_title">
+	        <div class="head_title-inner">
+	          <div class="c_icon">
+	            <h2 class="c_title">
+	              Thống kê truy cập
+	            </h2>
+	          </div>
+	          <div class="c_actions"></div>
+	
+	          <div class="clear_float"></div>
+	        </div>
+	      </div>
+	      <div class="c_content" style="font-size:12px;text-align:justify;">
+	        <img src="/images/users.png" style="width:20px;border:none;" /> Đang
+	        truy cập:
+	        <b
+	          ><span id="ct1000_luottruycap_ctl00_Label1" style="color:#CC0000;"
+	            >10</span
+	          ></b
+	        >
+	        <br />
+	        <img src="/images/hits.png" style="width:20px;border:none;" /> Tổng lượt
+	        truy cập:
+	        <b
+	          ><span id="ct1000_luottruycap_ctl00_lblCounter" style="color:#CC0000;"
+	            >98834111</span
+	          ></b
+	        >
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script src="/js/jquery.min.js"></script><script>$(document).ready(function() {
 	    $(".onlick-dropdown").click(function() {
 	      if($(this).hasClass('active')){
 	        $(this).children("ul").css({"display":"none"});
@@ -454,7 +737,7 @@
 																$(event.target.parentElement)
 																	.addClass('ui-tabs-selected')
 																	.addClass('ui-state-active');
-															}</script></td></tr></tbody></table><div class="ms-PartSpacingVertical"></div></td></tr><tr><td id="MSOZoneCell_WebPartWPQ10" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td valign="top"><div webpartid="5f3067fd-aea8-4cdd-9e63-0a9b866e98e7" haspers="false" id="WebPartWPQ10" class="ms-WPBody noindex" allowdelete="false" style="width: 545px"><div class="lacviet-tabsnews"><div id="ctl00_m_g_5f3067fd_aea8_4cdd_9e63_0a9b866e98e7_ctl00_tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all"><div class="head_title"><div class="head_title-inner" style="width:99%"><div class="c_icon" style="width:55%"><h2 class="c_title"><a class="tieude" href="/nghien-cuu-khoa-hoc" target="_self">Nghiên cứu khoa học</a></h2></div><div class="c_actions"></div><div class="clear_float"></div></div></div><div id="tab-content-noivu" categoryname="Thông báo" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: block"><div class="news-tab"><div class="news-tab-thumb-item-0"><div class="news-tab-thumb-item-left-0"><a href="/toa-dam-khoa-hoc-“khoang-cach-giua-quy-dinh-va-thuc-te-ap-dung-trong-he-thong-hanh-chinh-cong-nhat-ban”" class="news-tab-img-link-0"><img alt="" src="/https://filehvtt.hcma.vn/pic/01062019/T%c4%90_2636_20190621081250AM.jpg" class="news-tab-img-0"></a></div><div class="news-tab-thumb-item-right-0"><div class="news-tab-thumb-item-title-0"><a href="/toa-dam-khoa-hoc-“khoang-cach-giua-quy-dinh-va-thuc-te-ap-dung-trong-he-thong-hanh-chinh-cong-nhat-ban”">Tọa đàm khoa học: “Khoảng cách giữa quy định và thực tế áp dụng trong hệ thống hành chính công Nhật Bản”</a><div class="moTa"><h5>Trong khuôn khổ chương trình hợp tác, sáng ngày 20/6/2019, tại Hà Nội, Học viện Chính trị quốc gia Hồ Chí Minh và Cơ quan Hợp tác phát triển Nhật Bản (JICA) tổ chức Tọa đàm khoa học với chủ đề: “Khoảng cách giữa quy định và thực tế áp dụng trong hệ thống hành chính công Nhật Bản”. Chủ trì Tọa đàm có GS Sugimoto Yoshiteru, chuyên gia JICA, Viện Nhân sự quốc gia Nhật Bản; PGS,TS Hoàng Văn Nghĩa, Vụ trưởng Vụ Hợp tác quốc tế; PGS,TS Lưu Văn Quảng, Phó Viện trưởng Viện Chính trị học. Tham dự tọa đàm, có các chuyên gia, nhà khoa học của Học viện và JICA tại Việt Nam.</h5></div></div><div class="news-tab-thumb-item-content-0"></div></div></div></div></div><div id="tab-content-dieuhanh" categoryname="Thông báo" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none"><div class="news-tab"></div></div><div id="tab-content-tuyentruyen" categoryname="Thông báo" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none"><div class="news-tab"></div></div></div></div></div><script>function ShowTab(id, event) {
+															}</script></td></tr></tbody></table><div class="ms-PartSpacingVertical"></div></td></tr><tr><td id="MSOZoneCell_WebPartWPQ10" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td valign="top"><div webpartid="5f3067fd-aea8-4cdd-9e63-0a9b866e98e7" haspers="false" id="WebPartWPQ10" class="ms-WPBody noindex" allowdelete="false" style="width: 545px"><div class="lacviet-tabsnews"><div id="ctl00_m_g_5f3067fd_aea8_4cdd_9e63_0a9b866e98e7_ctl00_tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all"><div class="head_title"><div class="head_title-inner" style="width:99%"><div class="c_icon" style="width:55%"><h2 class="c_title"><a class="tieude" href="/nghien-cuu-khoa-hoc" target="_self">Nghiên cứu khoa học</a></h2></div><div class="c_actions"></div><div class="clear_float"></div></div></div><div id="tab-content-noivu" categoryname="Thông báo" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: block"><div class="news-tab"><div class="news-tab-thumb-item-0"><div class="news-tab-thumb-item-left-0"><a href="/toa-dam-khoa-hoc-khoang-cach-giua-quy-dinh-va-thuc-te-ap-dung-trong-he-thong-hanh-chinh-cong-nhat-ban" class="news-tab-img-link-0"><img alt="" src="/https://filehvtt.hcma.vn/pic/01062019/T%c4%90_2636_20190621081250AM.jpg" class="news-tab-img-0"></a></div><div class="news-tab-thumb-item-right-0"><div class="news-tab-thumb-item-title-0"><a href="/toa-dam-khoa-hoc-khoang-cach-giua-quy-dinh-va-thuc-te-ap-dung-trong-he-thong-hanh-chinh-cong-nhat-ban">Tọa đàm khoa học: “Khoảng cách giữa quy định và thực tế áp dụng trong hệ thống hành chính công Nhật Bản”</a><div class="moTa"><h5>Trong khuôn khổ chương trình hợp tác, sáng ngày 20/6/2019, tại Hà Nội, Học viện Chính trị quốc gia Hồ Chí Minh và Cơ quan Hợp tác phát triển Nhật Bản (JICA) tổ chức Tọa đàm khoa học với chủ đề: “Khoảng cách giữa quy định và thực tế áp dụng trong hệ thống hành chính công Nhật Bản”. Chủ trì Tọa đàm có GS Sugimoto Yoshiteru, chuyên gia JICA, Viện Nhân sự quốc gia Nhật Bản; PGS,TS Hoàng Văn Nghĩa, Vụ trưởng Vụ Hợp tác quốc tế; PGS,TS Lưu Văn Quảng, Phó Viện trưởng Viện Chính trị học. Tham dự tọa đàm, có các chuyên gia, nhà khoa học của Học viện và JICA tại Việt Nam.</h5></div></div><div class="news-tab-thumb-item-content-0"></div></div></div></div></div><div id="tab-content-dieuhanh" categoryname="Thông báo" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none"><div class="news-tab"></div></div><div id="tab-content-tuyentruyen" categoryname="Thông báo" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none"><div class="news-tab"></div></div></div></div></div><script>function ShowTab(id, event) {
 																event = event || window.event;
 																var parent = $(event.target.parentElement.parentElement.parentElement);
 																// hide all child tab
@@ -583,4 +866,4 @@
 															}).mouseout(function () {
 																$(this).removeClass("ms-navItem-hover");
 															});
-														});</script><div id="LeftMenuWebName" style="display:none">/Pages/Home.aspx</div><div id="ctl00_PlaceHolderMain_g_30177a82_2ef5_4214_a072_2171f1075900_ctl00_myPanel"><div class="navList"><ul class="ms-quickLaunch" id="menuproduct_b4392db5-7524-4303-8a8f-b1e5d09f6cc7" onload="collapseMenu(null,'menuproduct_b4392db5-7524-4303-8a8f-b1e5d09f6cc7')"></ul></div></div></div></div></td></tr></table></div><div class="hlOTopR-LG"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td id="MSOZoneCell_WebPartWPQ12" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="ms-WPBorderBorderOnly" valign="top"><div webpartid="b0d5d52a-3132-442b-a427-7091c459b719" haspers="false" id="WebPartWPQ12" width="100%" class="ms-WPBody noindex" allowdelete="false"><div id="ctl00_m_g_b0d5d52a_3132_442b_a427_7091c459b719"><div class="thongbao" xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema" xmlns:cs="urn:my-scripts"><div class="container_top1"><div style="CURSOR: pointer" class="container_top_left1"><div class="head_title"><div class="head_title-inner"><div class="c_icon" style="width:100%"><h2 class="c_title"><span class="TitleHead"><a href="/lich-giang">Lịch giảng</a></span></h2></div><div class="c_actions"></div><div class="clear_float"></div></div></div></div><div class="container_top_right1"/><div class="container_top_mid1"/></div><marquee id="scroll_header1" direction="up" height="350px" width="220px" scrollamount="1" scrolldelay="25" onmouseover="this.stop()" onmouseout="this.start()"><div class="container_mid1"><div class="container_mid_main1"><div class="thongbao-detail"><table border="0" cellspacing="5" cellpadding="0"><tbody></tbody></table></div></div></div></marquee></div></div></div></td></tr></table></td></tr></table></div></div></div></div></div></div></div><div class="clearfix"></div><footer><p style="font-size:12px"><b>TRƯỜNG CHÍNH TRỊ ĐAKNÔNG</b><br><b>Địa chỉ:</b>Đường Điểu Ong - Tổ 3, phường nghĩa trung, tx. Gia nghĩa, tỉnh ĐẮKNÔNG<br><b>Điện thoại:02616.260.600</b><br><b>Mail :cbtctdaknong@gmail.com</b></p></footer></div></div></form></body></html>
+														});</script><div id="LeftMenuWebName" style="display:none">/Pages/Home.aspx</div><div id="ctl00_PlaceHolderMain_g_30177a82_2ef5_4214_a072_2171f1075900_ctl00_myPanel"><div class="navList"><ul class="ms-quickLaunch" id="menuproduct_b4392db5-7524-4303-8a8f-b1e5d09f6cc7" onload="collapseMenu(null,'menuproduct_b4392db5-7524-4303-8a8f-b1e5d09f6cc7')"></ul></div></div></div></div></td></tr></table></div><div class="hlOTopR-LG"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td id="MSOZoneCell_WebPartWPQ12" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="ms-WPBorderBorderOnly" valign="top"><div webpartid="b0d5d52a-3132-442b-a427-7091c459b719" haspers="false" id="WebPartWPQ12" width="100%" class="ms-WPBody noindex" allowdelete="false"><div id="ctl00_m_g_b0d5d52a_3132_442b_a427_7091c459b719"><div class="thongbao" xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema" xmlns:cs="urn:my-scripts"><div class="container_top1"><div style="CURSOR: pointer" class="container_top_left1"><div class="head_title"><div class="head_title-inner"><div class="c_icon" style="width:100%"><h2 class="c_title"><span class="TitleHead"><a href="/lich-giang">Lịch giảng</a></span></h2></div><div class="c_actions"></div><div class="clear_float"></div></div></div></div><div class="container_top_right1"/><div class="container_top_mid1"/></div><marquee id="scroll_header1" direction="up" height="350px" width="220px" scrollamount="1" scrolldelay="25" onmouseover="this.stop()" onmouseout="this.start()"><div class="container_mid1"><div class="container_mid_main1"><div class="thongbao-detail"><table border="0" cellspacing="5" cellpadding="0"><tbody></tbody></table></div></div></div></marquee></div></div></div></td></tr></table></td></tr></table></div></div></div></div></div></div></div><div class="clearfix"></div><footer><p style="font-size:12px"><b>TRƯỜNG CHÍNH TRỊ ĐAKNÔNG</b><br><b>Địa chỉ:</b>Đường Điểu Ong - Tổ 3, phường nghĩa trung, tx. Gia nghĩa, tỉnh ĐẮKNÔNG<br><b>Điện thoại:02616.260.600</b><br><b>Mail :cbtctdaknong@gmail.com</b></p></footer></div></form></body></html>
